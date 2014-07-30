@@ -54,7 +54,7 @@ function wkhtmltopdf(input, options, callback) {
     // this nasty business prevents piping problems on linux
     var child = spawn(wkhtmltopdf.shell, ['-c', args.join(' ') + ' | cat']);
     console.log(wkhtmltopdf.shell, ['-c', args.join(' ') + ' | cat']);
-  }
+ }
 
   // call the callback with null error when the process exits successfully
   if (callback)
@@ -88,6 +88,6 @@ function wkhtmltopdf(input, options, callback) {
   return stream;
 }
 
-wkhtmltopdf.shell = '/app/bin/fakesu'
-wkhtmltopdf.command = 'wkhtmltopdf';
+wkhtmltopdf.shell = '/bin/sh'
+wkhtmltopdf.command = '/app/.root/bin/wkhtmltopdf';
 module.exports = wkhtmltopdf;
