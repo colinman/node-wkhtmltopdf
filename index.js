@@ -88,5 +88,5 @@ function wkhtmltopdf(input, options, callback) {
 }
 
 wkhtmltopdf.shell = '/app/bin/fakesu'
-wkhtmltopdf.command = '/bin/wkhtmltopdf';
+wkhtmltopdf.command = 'wkhtmltopdf';
 module.exports = wkhtmltopdf;
