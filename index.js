@@ -87,5 +87,5 @@ function wkhtmltopdf(input, options, callback) {
   return stream;
 }
 
-wkhtmltopdf.command = 'bin/fakesu -c wkhtmltopdf';
+wkhtmltopdf.command = '/bin/fakesu -c wkhtmltopdf';
 module.exports = wkhtmltopdf;
