@@ -31,7 +31,7 @@ function wkhtmltopdf(input, options, callback) {
     return true;
   }).concat(extraKeys);
 
-  var args = [wkhtmltopdf.command, '--quiet'];
+  var args = [wkhtmltopdf.command];//, '--quiet'];
   keys.forEach(function(key) {
     var val = options[key];
     if (key !== 'toc' && key !== 'cover' && key !== 'page')
